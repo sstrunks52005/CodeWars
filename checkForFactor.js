@@ -1,41 +1,20 @@
-//Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+// This function should test if the factor is a factor of base.
 
-//P 
-//R
-//E - Hello -> HHeelllloo "1234!_ " => "11223344__  "
-//P - setup func, take in string, 
+// Return true if it is a factor or false if it is not.
 
+// About factors
+// Factors are numbers you can multiply together to get another number.
 
-// Create a function finalGrade, which calculates the final grade of a student depending on two parameters: a grade for the exam and a number of completed projects.
+// 2 and 3 are factors of 6 because: 2 * 3 = 6
 
-// This function should take two arguments: exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);
+// You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
+// You can use the mod operator (%) in most languages to check for a remainder
+// For example 2 is not a factor of 7 because: 7 % 2 = 1
 
-// This function should return a number (final grade). There are four types of final grades:
+// Note: base is a non-negative number, factor is a positive number.
 
-// 100, if a grade for the exam is more than 90 or if a number of completed projects more than 10.
-// 90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.
-// 75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.
-// 0, in other cases
+function checkForFactor(base, factor){
+    return base % factor === 0;
+}
 
-
-function finalGrade (exam, projects) {
-    if (exam > 90 || projects > 10){
-      return 100;
-    }else if (exam > 75 &&  projects >= 5){
-      return 90;
-    }else if (exam > 50 && projects >= 2){
-      return 75;
-    }else{
-      return 0;
-    }
-  }
-  
-  
-  function finalGrade (exam, projects) {
-    if(exam > 90 || projects > 10) return 100;
-    if(exam > 75 &&  projects >= 5) return 90;
-    if(exam > 50 && projects >= 2) return 75;
-    return 0;
-  }
-  
-  const finalGrade = (grade, projects) => grade > 90 || projects > 10 ? 100 : grade > 75 && projects > 4 ? 90 : grade > 50 && projects > 1 ? 75 : 0;
+const checkForFactor = (base, factor) => base % factor === 0 ;
