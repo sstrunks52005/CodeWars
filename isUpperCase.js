@@ -1,0 +1,9 @@
+//Create a method to see whether the string is ALL CAPS.
+
+String.prototype.isUpperCase = function() {
+    return this === this.toUpperCase()
+}
+
+String.prototype.isUpperCase = function() {
+    return this.valueOf().toUpperCase() === this.valueOf();
+  }
