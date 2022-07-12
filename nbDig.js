@@ -21,3 +21,4 @@ function nbDig(n, d){
     return result.split(d).length-1
 }
 
+///add
